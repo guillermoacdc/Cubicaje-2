@@ -104,3 +104,8 @@ InitTestScene*.unity*
 
 # Auto-generated cache in Assets folder
 /[Aa]ssets/[Ss]ceneDependencyCache*
+# Builds locales del proyecto
+/[Bb]uild*/
+# Backups temporales
+*.backup.cs
+*.backup.cs.txt

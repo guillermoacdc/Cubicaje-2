@@ -122,6 +122,70 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &140710141
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 140710143}
+  - component: {fileID: 140710142}
+  m_Layer: 0
+  m_Name: CubicajeARManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &140710142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 140710141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cea684169b513c944bad24010c9b19f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  markerMgr: {fileID: 741667703}
+  palletWallColor: {r: 0.58, g: 0.85, b: 1, a: 0.35}
+  palletFloorColor: {r: 0.5, g: 0.8, b: 1, a: 0.5}
+  palletBackColorIdle: {r: 0, g: 0.5, b: 0.15, a: 0.75}
+  palletBackStrongGreen: {r: 0, g: 0.85, b: 0.15, a: 0.95}
+  travelColor: {r: 0.1, g: 1, b: 0.1, a: 1}
+  errorColor: {r: 1, g: 0, b: 0, a: 1}
+  palletOuterDims: {x: 0.21, y: 0.21, z: 0.21}
+  wallThickness: 0.005
+  baseHeightNudge: 0
+  coldStartIgnoreSeconds: 0.5
+  qrCooldown: 0.4
+  qrGlobalCooldownSeconds: 2
+  errorLifetimeSeconds: 1
+  palletPopDuration: 0.25
+  pieceTravelSpeed: 1
+  entryFrontOffset: 0.07
+  innerMargin: 0.008
+  curveDropFactor: 0.15
+  curveSamplesPerSegment: 30
+--- !u!4 &140710143
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 140710141}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &176600060 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2351505566903569413, guid: acbf65a81ce2cf94f82a0809298acf70, type: 3}
@@ -262,9 +326,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2351505567455720334, guid: acbf65a81ce2cf94f82a0809298acf70, type: 3}
       insertIndex: -1
       addedObject: {fileID: 741667703}
-    - targetCorrespondingSourceObject: {fileID: 2351505567455720334, guid: acbf65a81ce2cf94f82a0809298acf70, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 741667702}
   m_SourcePrefab: {fileID: 100100000, guid: acbf65a81ce2cf94f82a0809298acf70, type: 3}
 --- !u!1 &702540698
 GameObject:
@@ -449,38 +510,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2351505567455720332, guid: acbf65a81ce2cf94f82a0809298acf70, type: 3}
   m_PrefabInstance: {fileID: 504183416}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &741667702
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 741667698}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cea684169b513c944bad24010c9b19f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  markerMgr: {fileID: 741667703}
-  palletWallColor: {r: 0.58, g: 0.85, b: 1, a: 0.35}
-  palletFloorColor: {r: 0.5, g: 0.8, b: 1, a: 0.5}
-  palletBackColorIdle: {r: 0, g: 0.5, b: 0.15, a: 0.75}
-  palletBackStrongGreen: {r: 0, g: 0.85, b: 0.15, a: 0.95}
-  travelColor: {r: 0.1, g: 1, b: 0.1, a: 1}
-  errorColor: {r: 1, g: 0, b: 0, a: 1}
-  palletOuterDims: {x: 0.21, y: 0.21, z: 0.21}
-  wallThickness: 0.005
-  baseHeightNudge: 0
-  coldStartIgnoreSeconds: 0.5
-  qrCooldown: 0.4
-  qrGlobalCooldownSeconds: 2
-  errorLifetimeSeconds: 1
-  palletPopDuration: 0.25
-  pieceTravelSpeed: 1
-  entryFrontOffset: 0.07
-  innerMargin: 0.008
-  curveDropFactor: 0.15
-  curveSamplesPerSegment: 30
 --- !u!114 &741667703
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -594,7 +623,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1069083467}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b16597571f4131048a2a78e6eb9b7bd0, type: 3}
   m_Name: 
@@ -735,13 +764,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 9053635735682352367, guid: 65f40353d917a5b4fa51fa52c7aac877, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
-    - targetCorrespondingSourceObject: {fileID: 2462010993299344147, guid: 65f40353d917a5b4fa51fa52c7aac877, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 65f40353d917a5b4fa51fa52c7aac877, type: 3}
 --- !u!4 &1104242507 stripped
 Transform:
@@ -855,13 +878,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 9053635735682352367, guid: 65f40353d917a5b4fa51fa52c7aac877, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
-    - targetCorrespondingSourceObject: {fileID: 2462010993299344147, guid: 65f40353d917a5b4fa51fa52c7aac877, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 65f40353d917a5b4fa51fa52c7aac877, type: 3}
 --- !u!4 &1367729820 stripped
 Transform:
@@ -956,13 +973,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4700081180525614284, guid: bfe51893e22a0e7409eb17d0da463178, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1104242507}
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 7018369326519179860, guid: bfe51893e22a0e7409eb17d0da463178, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
-    - targetCorrespondingSourceObject: {fileID: 7394928173038196760, guid: bfe51893e22a0e7409eb17d0da463178, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bfe51893e22a0e7409eb17d0da463178, type: 3}
 --- !u!1 &1613997722 stripped
 GameObject:
@@ -1235,7 +1246,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2040837082
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1281,3 +1292,4 @@ SceneRoots:
   - {fileID: 783169196}
   - {fileID: 504183416}
   - {fileID: 1069083469}
+  - {fileID: 140710143}
